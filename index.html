@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset = "utf-8">
+<title>Click me!</title>
+<style>
+  body,button {
+    margin: 10px;
+  }
+  div {
+    padding: 10px;
+  }
+</style>
+
+<script>
+//为了讲解原理，我们依然将 JS 代码放在这里。
+  window.onload = function() {  //注释1️⃣
+    var count = 0;
+    var message = "You clicked me ";
+    var div = document.getElementById("message");
+
+    var button = document.getElementById("clickme");
+    button.onclick = function() {  //注释2️⃣、3️⃣
+      count++;
+      div.innerHTML = message + count + " times!";
+    };
+  };
+</script>
+
+</head>
+<body>
+  <button id="clickme">Click me!</button>
+  <div id="message"></div>
+</body>
+</html>
