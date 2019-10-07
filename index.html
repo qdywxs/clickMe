@@ -13,14 +13,13 @@
 </style>
 
 <script>
-//为了讲解原理，我们依然将 JS 代码放在这里。
-  window.onload = function() {  //注释1️⃣
+  window.onload = function() {
     var count = 0;
     var message = "You clicked me ";
     var div = document.getElementById("message");
-
     var button = document.getElementById("clickme");
-    button.onclick = function() {  //注释2️⃣、3️⃣
+    
+    button.onclick = function() {
       count++;
       div.innerHTML = message + count + " times!";
     };
